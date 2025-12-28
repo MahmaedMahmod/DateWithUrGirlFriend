@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/flower.css" />
+  </head>
+  <body>
+    <div id="thankyou"><b>Thank you ya ro7 alpy!</b></div>
+    
+    <video id="rizz" class="responsive" autoplay loop controls style="max-width: 500px; width: 100%;">
+      <source src="vid/tit titi.mp4" type="video/mp4" />
+      Your browser does not support the video element.
+    </video>
+    
+    <script>
+      window.addEventListener('load', function() {
+        var video = document.getElementById('rizz');
+        video.muted = false;
+        video.play().catch(function(error) {
+          video.muted = true;
+          video.play();
+          document.body.addEventListener('click', function() {
+            video.muted = false;
+          }, { once: true });
+        });
+      });
+    </script>
+  </body>
+</html>

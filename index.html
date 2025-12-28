@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./style/css/styles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div>
+        <h1 class="header_text">Do you wanna go out with me ya ro7y !?</h1>
+      </div>
+
+      <div class="gif_container">
+        <img
+          src="https://media.giphy.com/media/LnKonfpQ44fNvuGLkA/giphy.gif"
+          alt="Cute animated illustration"
+        />
+      </div>
+
+      <div class="buttons">
+        <button class="btn" id="yesButton" onclick="nextPage()">Yes</button>
+      
+        <button class="btn" id="noButton" onclick="growYesButton()">No</button>
+
+        <script>
+          function nextPage() {
+            window.location.href = "valentine/thankyou.html";
+          }
+
+          function growYesButton() {
+            var yesBtn = document.getElementById('yesButton');
+            var currentWidth = yesBtn.offsetWidth;
+            var currentHeight = yesBtn.offsetHeight;
+            yesBtn.style.width = (currentWidth + 30) + 'px';
+            yesBtn.style.height = (currentHeight + 15) + 'px';
+            yesBtn.style.fontSize = (parseFloat(window.getComputedStyle(yesBtn).fontSize) + 3) + 'px';
+          }
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
